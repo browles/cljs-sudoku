@@ -58,7 +58,8 @@
 
 (defn run-solver []
   (let [boards (solver/solve @board)
-        c (onto-chan (chan 1) boards)]
+        c (chan 1)]
+    (onto-chan c boards)
     (go-loop [b (<! c)]
       (when b (reset! board b))
       (when-not (:complete (meta b))
