@@ -1,0 +1,52 @@
+body {
+  font-family: 'Helvetica Neue', Verdana, Helvetica, Arial, sans-serif;
+  padding-top: 1em;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1em;
+  color: #333;
+  line-height: 1.5em;
+  width: 100%;
+}
+
+div { box-sizing: border-box; }
+
+#app {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.row {
+  height: 2em;
+  white-space: nowrap;
+}
+
+.green {
+  animation: fade-green 15s;
+}
+
+.red {
+  animation: fade-red 10s;
+}
+
+.cell {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  border: 1px dashed #eee;
+}
+
+@keyframes fade-green {
+  0% { background-color: green; }
+  40% { background-color: teal; }
+  80% { background-color: #3cf;}
+  100% { background-color: transparent; }
+}
+
+@keyframes fade-red {
+  0% { background-color: red; }
+  100% { background-color: transparent; }
+}
