@@ -1,5 +1,4 @@
-(ns sudoku.solver
-  (:require [clojure.core.reducers :as r]))
+(ns sudoku.solver)
 
 (defn sqrt [n]
   (#? (:clj Math/sqrt :cljs js/Math.sqrt) n))
